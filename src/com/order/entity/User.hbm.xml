@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+       "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+       "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.order.entity">
+	<!-- class元素定义持久化类的具体包路径，关联的数据库及表名称 -->
+	<class name="User" table="user">
+		<!-- id元素定义表的主键对应持久化类中的属性名称，数据类型 -->
+		<id name="user_id" type="java.lang.Integer">
+			<!-- generator元素定义表的主键生成方式，这里采用native方式 -->
+			<generator class="native"/>
+		</id>
+		
+		<!-- property元素定义持久化类的其他属性与表中列名之间的对照关系及数据类型等 -->
+		<property name="user_name" not-null="true"/>
+		<property name="user_pass" not-null="true"/>
+		<property name="user_realname"/>
+		<property name="user_sex"/>
+		<property name="user_flag" not-null="true"/>
+		<property name="user_mail"/>
+		<property name="status"/>
+		<property name="user_head"/>
+		<property name="registTime"/>
+		<!-- 一对一主键关联关系 -->
+		<one-to-one name="userinfo" property-ref="user"/>
+		<!-- 双向一对多关联关系 -->
+		<set name="orders" cascade="delete">
+			<key column="user_id"/>
+			<one-to-many class="Orders"/>
+		</set>
+		
+		<set name="message" cascade="delete">
+			<key column="user_id"/>
+			<one-to-many class="Message"/>
+		</set>
+	</class>
+</hibernate-mapping>

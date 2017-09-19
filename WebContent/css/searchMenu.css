@@ -1,0 +1,48 @@
+.menu-content .menu-box{
+	float:left;
+	margin: 0 5px;
+	max-width: 150px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+.menu-content .noMenu{
+	color:#f22e00;
+	font-size:16px;
+}	
+.menu-content .menu-show{
+	border: 1px solid #eee;
+    padding: 20px;
+}
+.menu-content .searchName,.menu-content .number{
+	color:#f22e00;
+}
+.menu-content .result-title{
+	margin:10px 0;
+}
+.clearfix{
+	content:'';
+	display:block;
+	clear:both;
+}
+.menu-box .name{
+	margin-left:-9px;
+	font-size:16px;
+	color:#333;
+	font-weight: 600;
+}
+.menu-box .content{
+	margin-top:5px;
+	display:block;
+	color:#808080;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow: ellipsis;
+}
+.menu-box .price{
+	color:#f22e00;
+}
+.menu-box:hover{
+ 	box-shadow: 1px 1px 5px #eee,-1px -1px 5px #eee;
+}
+	

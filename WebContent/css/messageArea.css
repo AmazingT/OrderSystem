@@ -1,0 +1,118 @@
+ul{
+	margin-bottom: 0;
+}
+.clearfix{
+	content:'';
+	display:block;
+	clear:both;
+}
+.header {
+	height: 40px;
+	list-style: none;
+	background-color: #f5f5f5;
+	opacity: 0.90;
+	font-family: '微软雅黑';
+	border-bottom:1px solid #eee;
+}
+.header .header-right{
+	float: right;
+}
+.header-right .icon-shopping-cart{
+	color: #f22e00;
+	margin-right: 8px;
+}
+.header-right .icon-angle-down{
+	margin-left: 5px;
+}
+.header span:hover{
+	color: #f22e00!important
+}
+.header li {
+	float: left;
+	height: 40px;
+	position: relative;
+	list-style: none;
+}
+.header li.last {
+	background: none;
+}
+.header li a {
+	text-decoration: none;
+}
+.header-right li a span {
+	float: left;
+	display: block;
+	line-height: 40px;
+	font-size: 14px;
+	color: #6C6C6C;
+	cursor: pointer;
+	width: 120px;
+	text-align: center;
+}
+.drop-menu li a span {
+	text-align: center;
+}
+.header-left .menu-user{
+	line-height: 40px;
+	display: block;
+	width: 80px;
+	text-align: center;
+}
+.drop-login a span,.drop-register a span{
+	color: #6C6C6C;
+	display: block;
+	line-height: 40px;
+	text-align: center;
+	margin-right: 20px;
+}
+.header-left .menu-user li a span{
+	padding:5px;
+}
+.header-left li:first-child a span{
+	color:#f22e00;
+}
+.header .drop-right {
+	margin-left: 45px;
+}
+.header li.selected .submenu {
+	display: block;
+}
+.header li .submenu {
+	display: none;
+	position: absolute;
+	top: 40px;
+	z-index: 999;
+}
+.header li .submenu li {
+	float: none;
+	padding: 0;
+	background: none;
+	height: auto;
+	border-bottom: dotted 0px #BEBEBE;
+}
+.footer{
+	margin-top: 50px;
+}
+.footer .footer-top{
+	text-align: center;	
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+.footer .footer-top a{
+	padding: 10px;
+	display: inline-block;
+}
+.footer .footer-top a.last{
+	border-right: none;
+}
+.footer .footer-bottom{
+	color: #999;
+	padding: 10px;
+	text-align: center;
+}
+.pageRow .active{
+	color:#fff;
+	background-color:#f60;
+	border-color:#f60;
+}
+	

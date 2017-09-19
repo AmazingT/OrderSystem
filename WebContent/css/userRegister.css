@@ -1,0 +1,74 @@
+.header a.lemai{
+	width: 120px;
+	height: 105px;
+	display: block;
+	float: left;
+	background: url("../image/logo.jpg") no-repeat;
+	background-size: 100%;
+	text-indent: -999px;
+}
+.header .header-title{
+	float: left;
+	height: 105px;
+	color: #0076c3;
+	font-size: 25px;
+	font-family: "华文行楷";
+	font-weight: 600;
+	line-height:105px;
+}
+.header .header-login{
+	line-height:105px;
+	float: right;
+}
+.register-content .result{
+    color: #c00;
+    font-size: 14px;
+    margin:15px 0;
+    padding: 0 10px;
+    line-height: 35px;
+    height: 35px;
+    background-color: #fff2f2;
+    border: 1px solid #ff8080;
+    border-radius: 4px;
+}
+.register-content .success{
+	color: #fff;
+	background-color: #5cb85c;
+    border: 1px solid #5cb85c;
+}
+input.btn {
+	width:100%;
+}
+.register{
+	padding:40px 0;
+	background-color: #f1f1f1;
+	border:1px solid #eee;
+}
+.register .register-box{
+	width: 340px;
+	margin:0 auto;
+}
+.register .register-box .register-heder{
+	text-align:center;
+	padding:15px 0;
+}
+.footer{
+	margin-top: 50px;
+}
+.footer .footer-top{
+	text-align: center;	
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+.footer .footer-top a{
+	padding: 10px;
+	display: inline-block;
+}
+.footer .footer-top a.last{
+	border-right: none;
+}
+.footer .footer-bottom{
+	color: #999;
+	padding: 10px;
+	text-align: center;
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+       "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+       "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<!-- class元素定义持久化类的具体包路径，关联的数据库及表名称 -->
+	<class name="com.order.entity.Menu" table="menu">
+		<!-- id元素定义表的主键对应持久化类中的属性名称，数据类型 -->
+		<id name="menu_id" type="java.lang.Integer">
+			<!-- generator元素定义表的主键生成方式，这里采用native方式 -->
+			<generator class="native"/>
+		</id>
+		
+		<!-- property元素定义持久化类的其他属性与表中列名之间的对照关系及数据类型等 -->
+		<property name="menu_name" column="menu_name" not-null="true"/>
+		<property name="menu_content" column="menu_content" not-null="true"/>
+		<property name="menu_price" column="menu_price" not-null="true"/>
+	</class>
+</hibernate-mapping>

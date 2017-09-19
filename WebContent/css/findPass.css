@@ -1,0 +1,37 @@
+.find-pass{
+	margin-top: 20px;
+}
+.find-box-in{
+	width: 340px;
+	margin:0 auto;
+	padding: 12px 25px;
+	border: 1px solid #dfe8f2;
+	background-color: #fafafa;
+	border-radius: 4px;
+}
+.find-content .result{
+    color: #c00;
+    font-size: 14px;
+    margin:15px 0;
+    padding: 0 10px;
+    line-height: 35px;
+    height: 35px;
+    background-color: #fff2f2;
+    border: 1px solid #ff8080;
+    border-radius: 4px;
+}
+.find-content .success{
+	color: #fff;
+	background-color: #5cb85c;
+    border: 1px solid #5cb85c;
+    font-size: 14px;
+    margin:15px 0;
+    padding: 0 10px;
+    line-height: 35px;
+    height: 35px;
+    border-radius: 4px;
+}
+.find-content .code{
+	width: 40%;
+	display: inline-block;
+}

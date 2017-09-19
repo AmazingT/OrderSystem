@@ -1,0 +1,62 @@
+.table-responsive{
+	margin-top:45px;
+	text-align:center;
+}
+.table tr.title th{
+	text-align:center;
+}
+.table tr.title{
+	color:#fff;
+	background-color:#0071ba;
+}
+.table tr.record:hover{
+	background-color: #eee;
+}
+.table-bottom{
+	float:right;
+}
+.table-bottom span{
+	margin-right: 10px;
+}
+.table-bottom .totalprice{
+	color:#f60;
+}
+.message{
+	color:#c9302c;
+	margin-top: 30px;
+	text-align: center;
+    font-size: 18px;
+}
+
+.order-num{
+	font-size: 14px;
+    height: 34px;
+    line-height: 34px;
+    width: 40px;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 0;
+    text-align: center;
+    outline: 0;
+    margin: 0;
+}
+.btn-num-left,.btn-num-right{
+    height: 34px;
+    width: 30px;
+    border: 1px solid #ccc;
+    color: #666;
+    outline: 0;
+}
+.btn-num-left{
+	margin-right: -4px;
+}
+.btn-num-right{
+	margin-left: -4px;
+}
+.btn-num-left:hover{
+	background-color: #ccc;
+}
+.btn-num-right:hover{
+	background-color: #ccc;
+}

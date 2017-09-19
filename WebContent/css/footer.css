@@ -1,0 +1,20 @@
+.footer{
+	margin-top: 50px;
+}
+.footer .footer-top{
+	text-align: center;	
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+.footer .footer-top a{
+	padding: 10px;
+	display: inline-block;
+}
+.footer .footer-top a.last{
+	border-right: none;
+}
+.footer .footer-bottom{
+	color: #999;
+	padding: 10px;
+	text-align: center;
+}

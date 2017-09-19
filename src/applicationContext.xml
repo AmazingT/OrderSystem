@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:tx="http://www.springframework.org/schema/tx"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:aop="http://www.springframework.org/schema/aop"
+ xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+ xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+		http://www.springframework.org/schema/jdbc
+		http://www.springframework.org/schema/jdbc/spring-jdbc-4.1.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+
+     <!-- 自动扫描(自动注入) -->
+    <context:component-scan base-package="com.order"/>
+
+     <!-- c3p0数据源配置 -->
+     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+     	<property name="driverClass" value="com.mysql.jdbc.Driver"/>
+     	<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/ordersystemdb?useUnicode=true&amp;useSSL=false&amp;characterEncoding=utf-8"/>
+     	<property name="user" value="root"/>
+     	<property name="password" value="1314"/>
+     	<property name="initialPoolSize" value="2"/>
+     	<property name="minPoolSize" value="2"/>
+     	<property name="maxPoolSize" value="10"/>
+     	<!-- 60s未使用则被丢弃.若为0则永不丢弃 -->
+     	<property name="maxIdleTime" value="60"/>
+     	<!-- 连接耗尽，一次同时获取的连接数.default:3 -->
+     	<property name="acquireIncrement" value="5"/>
+     	<!-- 每60s检查所有连接池中的空闲连接 -->
+		<property name="idleConnectionTestPeriod" value="60"/>  
+     </bean>
+     
+     <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+     	<!-- 注入数据源 -->
+     	<property name="dataSource" ref="dataSource"/>
+     	<!-- hibernate.cfg.xml中的配置 -->
+     	<property name="mappingResources">
+     		<list>
+     			<value>com/order/entity/Admin.hbm.xml</value>
+     			<value>com/order/entity/Menu.hbm.xml</value>
+     			<value>com/order/entity/Orders.hbm.xml</value>
+     			<value>com/order/entity/User.hbm.xml</value>
+     			<value>com/order/entity/UserInfo.hbm.xml</value>
+     			<value>com/order/entity/Message.hbm.xml</value>
+     		</list>
+     	</property>
+     	<property name="hibernateProperties">
+     		<props>
+     			<prop key="hibernate.hbm2ddl.auto">update</prop><!-- 自动生成表结构,若已经存在则更新表 -->
+     			<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+     			<prop key="hibernate.show_sql">true</prop>
+     			<prop key="hibernate.temp.use_jdbc_metadata_defaults">false</prop>
+     			<prop key="hibernate.connection.release_mode">after_statement</prop>
+     		</props>		
+     	</property>
+     </bean>
+     
+     <bean id="txManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	 </bean> 
+	 
+	 <tx:annotation-driven transaction-manager="txManager"/> 
+</beans>

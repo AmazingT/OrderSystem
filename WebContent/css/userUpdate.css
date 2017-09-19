@@ -1,0 +1,37 @@
+.update-pass{
+	margin-top: 20px;
+}
+.update-header h4{
+	color: #78b70e;
+}
+.update-box-in{
+	width: 340px;
+	margin:0 auto;
+	padding: 12px 25px;
+	border: 1px solid #dfe8f2;
+	background-color: #fafafa;
+	border-radius: 4px;
+}
+.update-content .result{
+    color: #c00;
+    font-size: 14px;
+    margin:15px 0;
+    padding: 0 10px;
+    line-height: 35px;
+    height: 35px;
+    background-color: #fff2f2;
+    border: 1px solid #ff8080;
+    border-radius: 4px;
+}
+.update-content .result-true{
+	color: #fff;
+	font-size: 14px;
+    margin:15px 0;
+    padding: 0 10px;
+    line-height: 35px;
+    height: 35px;
+    border-radius: 4px;
+    background-color: #78b70e;
+    border: 1px solid #78b70e;
+}
+

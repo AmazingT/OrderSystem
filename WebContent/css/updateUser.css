@@ -1,0 +1,22 @@
+.update-box{
+	width: 300px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+.update-box .update-title{
+	text-align: center;
+	margin-bottom: 35px;
+}
+.update-title h3{
+	color:#0377c5;
+	font-family: "华文行楷";
+}
+.radio .radio-tip{
+	padding-left: 0;
+}
+.update-box .btn{
+	width: 45%;
+}
+.back i{
+	margin-right: 10px;
+}

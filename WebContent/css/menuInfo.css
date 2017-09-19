@@ -1,0 +1,61 @@
+.btn {
+	outline:none;
+}
+.menuInfo{
+	margin:0 auto;
+	max-width: 980px;
+    padding: 20px;
+    border: 1px solid #eee;
+}
+.menuInfo h4{
+	font-weight: 700;
+	color:#333;
+	font-size: 18px;
+	margin-left:-9px;
+}
+.menuInfo .menu-img{
+	float:left;
+}
+.menuInfo .menu-content{
+	float:left;
+	margin-left: 30px;
+}
+.menuInfo .menu-price{
+	color:#f22e00;
+}
+textarea{
+	outline:none;
+	resize:none;
+}
+.menu-content .order-num{
+	font-size: 14px;
+    height: 34px;
+    line-height: 34px;
+    width: 40px;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 0;
+    text-align: center;
+    outline: 0;
+    margin: 0;
+}
+.menu-content .btn-num-left,.menu-content .btn-num-right{
+    height: 34px;
+    width: 30px;
+    border: 1px solid #ccc;
+    color: #666;
+    outline: 0;
+}
+.menu-content .btn-num-left{
+	margin-right: -4px;
+}
+.menu-content .btn-num-right{
+	margin-left: -4px;
+}
+.menu-content .btn-num-left:hover{
+	background-color: #ccc;
+}
+.menu-content .btn-num-right:hover{
+	background-color: #ccc;
+}

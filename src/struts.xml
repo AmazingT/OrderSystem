@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+        "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+    <constant name="struts.objectFactory" value="spring"/>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <constant name="struts.devMode" value="false"/>
+    <!--  用spring作为对象工厂来替代struts2来创建action-->
+
+    <package name="default" namespace="/order" extends="struts-default">
+        <!-- 此处的class的值为spring创建的action类,用类得简单名称进行注入 -->
+        <!-- action的class指向spring bean管理器的id class指定处理类  此处使用spring的注解@Controller 自动将类名首字母小写注册为bean -->
+        <action name="query_*" class="listAction" method="{1}">
+            <result name="list">/orderPage/Cart.jsp</result>
+            <result name="noMenu">/orderPage/Cart.jsp</result>
+        </action>
+
+        <action name="admin_*" class="adminAction" method="{1}">
+            <result name="adminExit" type="redirect">/manage/adminLogin.jsp</result>
+        </action>
+
+        <action name="upload_*" class="uploadAction" method="{1}">
+            <result name="success" type="redirectAction">order_searchUserOrder.action</result>
+        </action>
+
+        <action name="user_*" class="userAction" method="{1}">
+            <result name="exit" type="redirect">/index.jsp</result>
+            <result name="judgeLogin" type="redirectAction">user_judgeLogin.action</result>
+            <result name="userList" type="redirect">/manage/userManage/userManage.jsp</result>
+            <result name="addUserMsg" type="redirect">/manage/userManage/message.jsp</result>
+            <result name="update" type="redirect">/manage/userManage/updateUser.jsp</result>
+            <result name="actionSuccess" type="redirectAction">/user_userList.action</result>
+            <result name="deleteSuccess" type="redirect">/manage/manage.jsp</result>
+            <result name="activeResult" type="redirect">/user/message.jsp</result>
+            <result name="changeMail" type="redirect">/user/changeMail.jsp</result>
+        </action>
+
+        <action name="menu_*" class="menuAction" method="{1}">
+            <result name="show" type="redirect">/index.jsp</result>
+            <result name="menuInfo">/orderPage/menuInfo.jsp</result>
+            <result name="searchMenu" type="redirect">/orderPage/searchMenuList.jsp</result>
+            <result name="update" type="redirect">/manage/menuManage/menuUpdate.jsp</result>
+            <result name="menuList" type="redirect">/manage/menuManage/menuManage.jsp</result>
+            <result name="success" type="redirectAction">/menu_menuList.action</result>
+        </action>
+
+        <action name="order_*" class="ordersAction" method="{1}">
+            <result name="addSuccess" type="redirectAction">/menu_showMenu.action</result>
+            <result name="login" type="redirect">/user/userLogin.jsp</result>
+            <result name="orderInfo" type="redirect">/orderPage/submitOrder.jsp</result>
+            <result name="orderList" type="redirect">/manage/orderMange/orderManage.jsp</result>
+            <result name="userOrder" type="redirect">/user/userInfo.jsp</result>
+            <result name="queryUserOrder" type="redirect">/manage/orderMange/queryUserOrder.jsp</result>
+            <result name="deleteSuccess" type="redirectAction">query_menuList.action</result>
+            <result name="update" type="redirectAction"><param name="order_orderList"/>order_orderList?pay=0
+            </result>
+        </action>
+
+        <action name="info_*" class="userInfoAction" method="{1}">
+            <result name="info">/orderPage/sendInfo.jsp</result>
+        </action>
+
+        <action name="mg_*" class="messageAction" method="{1}">
+            <result name="saveUserMsg" type="redirectAction">mg_messageList.action</result>
+            <result name="noLogin" type="redirect">/user/userLogin.jsp</result>
+            <result name="mgList" type="redirect">/message/messageArea.jsp</result>
+            <result name="deleteSuccess" type="redirectAction">/mg_msgList.action</result>
+            <result name="show" type="redirect">/message/userMessage.jsp</result>
+            <result name="message" type="redirect">/user/message.jsp</result>
+            <result name="msgList" type="redirect">/manage/msgManage/msgManage.jsp</result>
+            <result name="oneMessage" type="redirect">/manage/note_manage/onemessage.jsp</result>
+        </action>
+
+    </package>
+</struts>

@@ -1,0 +1,30 @@
+.header{
+	margin-bottom:10px;
+}
+.header i{
+	margin-right: 5px;
+}
+.table-responsive{
+	text-align:center;
+}
+.table tr.title{
+	color:#fff;
+	background-color:#0071ba;
+}
+.table tr.record:hover{
+	background-color: #eee;
+}
+.pageRow .active{
+	color:#fff;
+	background-color:#f60;
+	border-color:#f60;
+}
+.pageRow .btn-default:hover{
+	color:#fff;
+	background-color:#f60;
+	border-color:#f60;
+}
+.pageRow{
+	margin: 80px 0 40px 0;
+	text-align:center;
+}

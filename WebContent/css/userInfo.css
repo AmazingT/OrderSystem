@@ -1,0 +1,67 @@
+.nav-stacked>li {
+	text-align: center;
+}
+
+.tab-content {
+	float: left;
+	min-height: 600px;
+	border: 1px solid #eee;
+}
+
+.info-box {
+	margin-top: 40px;
+}
+
+#nav {
+	border: 1px solid #eee;
+}
+
+.col-md-2 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.update-box {
+	max-width: 280px;
+	margin: 0 auto;
+}
+
+.update-box .update-title {
+	font-size: 17px;
+	color:#337ab7;
+	margin: 15px 0;
+}
+.radio label{
+	padding-left:0;
+}
+.find-content .success{
+    color: #fff;
+    font-size: 14px;
+    margin:15px 0;
+    padding: 0 10px;
+    line-height: 35px;
+    height: 35px;
+    background-color: #449d44;
+    border: 1px solid #ff8080;
+    border-radius: 4px;
+}
+#question h4{
+	color:#333;
+	font-weight:600;
+}
+#question p{
+	font-size: 14px;
+    line-height: 30px;
+    margin:0 12px;
+}
+#link p{
+	margin:12px 5px;
+}
+#link p a{
+	color:#333;
+}
+#about p{
+	font-size: 14px;
+    line-height: 30px;
+    margin:0 12px;
+}

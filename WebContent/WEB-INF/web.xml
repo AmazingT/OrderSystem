@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+			xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" 
+			id="WebApp_ID" version="3.1">
+  <display-name>OrderSystem</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!--指定spring的配置文件，默认从web根目录寻找配置文件，我们可以通过spring提供的classpath:前缀指定从类路径下寻找-->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:applicationContext.xml</param-value>
+  </context-param>
+  <!--将spring配置文件加载到web容器中-->
+  <!--ContextLoaderListener的作用就是启动Web容器时，自动装配ApplicationContext的配置信息。-->
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+  <filter>
+  	<filter-name>struts</filter-name>
+  	<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>struts</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+</web-app>

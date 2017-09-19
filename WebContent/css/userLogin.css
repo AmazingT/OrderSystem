@@ -1,0 +1,87 @@
+li{
+	list-style: none;
+}
+.header {
+	height: auto;
+	padding-top: 20px;
+}
+.header a{
+	width: 120px;
+	height: 105px;
+	display: block;
+	float: left;
+	background: url("../image/logo.jpg") no-repeat;
+	background-size: 100%;
+	text-indent: -999px;
+}
+.header .header-title{
+	float: left;
+	height: 105px;
+	color: #0076c3;
+	font-size: 25px;
+	font-family: "华文行楷";
+	font-weight: 600;
+	line-height:105px;
+}
+.clearfix {
+	content: '';
+	display: block;
+	clear: both;
+}
+.login{
+	margin-top: 20px;
+}
+.login .img-box{
+	float: left;
+}
+.login .login-box{
+	float: left;
+	width: 340px;
+	margin: 0 50px;
+	padding: 12px 25px;
+	border: 1px solid #dfe8f2;
+	background-color: #fafafa;
+	border-radius: 4px;
+}
+.login-content .result{
+    color: #c00;
+    font-size: 14px;
+    margin:15px 0;
+    padding: 0 10px;
+    line-height: 35px;
+    height: 35px;
+    background-color: #fff2f2;
+    border: 1px solid #ff8080;
+    border-radius: 4px;
+}
+.login-content .code{
+	width: 40%;
+	display: inline-block;
+}
+.login-content .forget{
+	float: right;
+	color: #78b70e;
+}
+.login-content .btn{
+	width: 100%;
+}
+.footer{
+	margin-top: 50px;
+}
+.footer .footer-top{
+	text-align: center;	
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+.footer .footer-top a{
+	padding: 10px;
+	display: inline-block;
+}
+.footer .footer-top a.last{
+	border-right: none;
+}
+.footer .footer-bottom{
+	color: #999;
+	padding: 10px;
+	text-align: center;
+}
